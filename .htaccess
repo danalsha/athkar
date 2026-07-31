@@ -1,0 +1,2 @@
+# Apache / cPanel — serve Apple Wallet passes correctly
+AddType application/vnd.apple.pkpass .pkpass

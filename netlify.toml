@@ -1,0 +1,6 @@
+# Netlify configuration
+[[headers]]
+  for = "/*.pkpass"
+  [headers.values]
+    Content-Type = "application/vnd.apple.pkpass"
+    Content-Disposition = "inline"
