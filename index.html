@@ -3,254 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أذكار الصباح · صدقة جارية عن عبدالله السلطان</title>
-  <meta name="description" content="بطاقة أذكار الصباح تُضاف إلى محفظة آبل — صدقة جارية عن عبدالله السلطان، نسأل الله أن يجعلها في ميزان حسناته." />
+  <title>صدقة جارية · أذكار في محفظتك</title>
+  <meta name="description" content="بطاقات أذكار تُضاف إلى محفظة هاتفك — صدقة جارية عن عبدالله السلطان، رحمه الله. ذكرٌ يرافقك في يومك، وخيرٌ يمتد أثره إلى غيرك." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="أذكار الصباح · صدقة جارية" />
-  <meta property="og:description" content="حمّل بطاقة أذكار الصباح وأضِفها إلى محفظتك — صدقة جارية عن عبدالله السلطان." />
+  <meta property="og:title" content="صدقة جارية · أذكار في محفظتك" />
+  <meta property="og:description" content="احفظ بطاقات الأذكار في محفظة هاتفك، واجعلها عادةً لا تنقطع، ثم انشرها." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ar_SA" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
+    /* ===== Cocon Next Arabic ===== */
+    @font-face{
+      font-family:"Cocon Next Arabic";
+      src:url("assets/fonts/cocon-next-arabic-light.otf") format("opentype");
+      font-weight:300; font-style:normal; font-display:swap;
+    }
+    @font-face{
+      font-family:"Cocon Next Arabic";
+      src:url("assets/fonts/cocon-next-arabic-regular.otf") format("opentype");
+      font-weight:400; font-style:normal; font-display:swap;
+    }
+    @font-face{
+      font-family:"Cocon Next Arabic";
+      src:url("assets/fonts/cocon-next-arabic-bold.otf") format("opentype");
+      font-weight:700; font-style:normal; font-display:swap;
+    }
+
     :root{
-      --ivory: #fbf7ef;
-      --ivory-2: #f5eede;
-      --paper: #ffffff;
-      --ink: #2c2620;
-      --ink-soft: #6b6156;
-      --gold: #c9a24b;
-      --gold-deep: #a9832f;
-      --gold-soft: #e7d3a1;
-      --green: #1f5c4d;
-      --green-deep: #163f34;
-      --line: rgba(169,131,47,.22);
-      --shadow: 0 24px 60px -24px rgba(44,38,32,.35);
-      --shadow-sm: 0 10px 30px -14px rgba(44,38,32,.35);
+      --white:#ffffff;
+      --black:#000000;
+      --gray:#F5F5F5;
+      --sky:#76ABAE;                       /* سماوي */
+      --sky-37:rgba(118,171,174,.37);      /* شفافية 37% */
+      --sky-15:rgba(118,171,174,.15);
+      --sky-08:rgba(118,171,174,.08);
+      --ink-soft:#5a5f61;
+      --line:rgba(0,0,0,.08);
+      --line-sky:rgba(118,171,174,.35);
+      --shadow:0 24px 60px -32px rgba(0,0,0,.28);
+      --shadow-sm:0 12px 30px -18px rgba(0,0,0,.22);
     }
 
     *{ box-sizing:border-box; margin:0; padding:0; }
-
     html{ scroll-behavior:smooth; }
+    html,body{ overflow-x:hidden; }
 
     body{
-      font-family:"Tajawal", system-ui, -apple-system, "Segoe UI", sans-serif;
-      color:var(--ink);
+      font-family:"Cocon Next Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color:var(--black);
       background:
-        radial-gradient(1200px 700px at 85% -10%, rgba(201,162,75,.14), transparent 60%),
-        radial-gradient(1000px 600px at -10% 10%, rgba(31,92,77,.08), transparent 55%),
-        linear-gradient(180deg, var(--ivory) 0%, var(--ivory-2) 100%);
+        radial-gradient(1100px 560px at 82% -12%, var(--sky-15), transparent 62%),
+        radial-gradient(820px 520px at -6% 6%, var(--sky-08), transparent 58%),
+        var(--white);
       background-attachment:fixed;
       min-height:100vh;
-      line-height:1.7;
+      line-height:1.85;
+      font-weight:400;
       -webkit-font-smoothing:antialiased;
     }
 
-    .wrap{ width:min(1080px, 92vw); margin-inline:auto; }
+    .wrap{ width:min(1040px, 92vw); margin-inline:auto; }
 
-    /* ornamental top rule */
     .topbar{
-      display:flex; align-items:center; justify-content:center; gap:14px;
-      padding:22px 0 6px;
-      color:var(--gold-deep);
-      font-family:"Reem Kufi", serif; font-weight:600; letter-spacing:.5px;
+      display:flex; align-items:center; justify-content:center; gap:13px;
+      padding:26px 0 4px; color:var(--sky); font-weight:700; letter-spacing:.6px;
+      font-size:1.04rem;
     }
-    .topbar .dot{ width:6px;height:6px;border-radius:50%;background:var(--gold); }
+    .topbar .dot{ width:6px;height:6px;border-radius:50%;background:var(--sky); }
 
     /* ===== HERO ===== */
-    .hero{ text-align:center; padding:26px 0 10px; }
-
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:8px 18px; border-radius:999px;
-      background:linear-gradient(180deg,#fff,#fdf8ee);
-      border:1px solid var(--line);
-      color:var(--gold-deep); font-weight:700; font-size:.95rem;
-      box-shadow:var(--shadow-sm);
-    }
-    .kicker svg{ width:18px;height:18px; }
-
+    .hero{ text-align:center; padding:28px 0 6px; }
     .hero h1{
-      font-family:"Aref Ruqaa","Amiri", serif;
-      font-size:clamp(2.9rem, 8vw, 5.2rem);
       font-weight:700;
-      line-height:1.05;
-      margin:20px 0 6px;
-      color:var(--ink);
-      letter-spacing:0;
+      font-size:clamp(1.95rem, 5.2vw, 3.05rem);
+      line-height:1.4;
+      margin:0 auto 20px;
+      max-width:780px;
+      color:var(--black);
     }
-    .hero h1 .grad{
-      background:linear-gradient(180deg, var(--gold-deep), var(--gold));
-      -webkit-background-clip:text; background-clip:text; color:transparent;
+    .hero h1 .accent{
+      color:var(--black);
+      background:linear-gradient(180deg,transparent 62%, var(--sky-37) 62%);
+      padding:0 4px;
     }
-
-    .basmala{
-      font-family:"Amiri", serif; font-size:clamp(1.2rem,3.4vw,1.7rem);
-      color:var(--gold-deep); margin-bottom:6px; opacity:.9;
-    }
-
-    .lede{
-      max-width:640px; margin:14px auto 0;
-      font-size:clamp(1.02rem, 2.4vw, 1.2rem);
-      color:var(--ink-soft);
-    }
-    .lede b{ color:var(--ink); font-weight:700; }
-
-    /* ===== CARD + CTA layout ===== */
-    .stage{
-      margin:38px 0 8px;
-      display:grid; grid-template-columns: 1.05fr .95fr; gap:38px; align-items:center;
-    }
-    @media (max-width: 860px){
-      .stage{ grid-template-columns:1fr; gap:30px; }
+    .hero .lede{
+      max-width:660px; margin:0 auto;
+      font-size:clamp(1.02rem, 2.4vw, 1.18rem);
+      color:var(--ink-soft); font-weight:400;
     }
 
-    /* Wallet card mockup */
-    .card{
-      position:relative;
-      background:linear-gradient(180deg,#ffffff, #fffdf8);
-      border-radius:26px;
-      padding:16px 16px 20px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,.7);
-      max-width:420px; margin-inline:auto; width:100%;
-      transform:rotate(-1.4deg);
-      transition:transform .5s cubic-bezier(.2,.8,.2,1);
-    }
-    .card:hover{ transform:rotate(0deg) translateY(-4px); }
-    .card::after{
-      content:""; position:absolute; inset:0; border-radius:26px;
-      box-shadow:inset 0 0 0 1px var(--line);
-      pointer-events:none;
-    }
-    .card .card-top{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:6px 8px 12px;
-    }
-    .card .brand{
-      font-family:"Reem Kufi",serif; font-weight:600; color:var(--ink-soft);
-      font-size:.9rem; letter-spacing:.3px;
-    }
-    .card .card-logo img{ height:38px; width:auto; display:block; }
-    .card .strip{
-      border-radius:16px; overflow:hidden; border:1px solid var(--line);
-      background:#fff;
-    }
-    .card .strip img{ width:100%; display:block; }
-    .card .pin{
-      margin-top:14px; padding:12px 16px; display:flex; justify-content:space-between;
-      align-items:center; border-top:1px dashed var(--line);
-      color:var(--ink-soft); font-size:.9rem;
-    }
-    .card .pin .val{ font-family:"Reem Kufi",serif; color:var(--ink); font-weight:600; letter-spacing:2px; }
-
-    .card .float{
-      position:absolute; top:-14px; inset-inline-start:-14px;
-      background:var(--green); color:#fff; font-weight:700; font-size:.82rem;
-      padding:8px 14px; border-radius:999px; box-shadow:var(--shadow-sm);
-      display:flex; align-items:center; gap:7px;
-    }
-    .card .float svg{ width:15px;height:15px; }
-
-    /* CTA column */
-    .cta h2{
-      font-family:"Aref Ruqaa","Amiri",serif; font-weight:700;
-      font-size:clamp(1.5rem,4vw,2rem); margin-bottom:8px;
-    }
-    .cta p{ color:var(--ink-soft); margin-bottom:22px; }
-
+    /* ===== primary CTA ===== */
+    .cta-main{ text-align:center; margin:34px 0 6px; }
     .btn-wallet{
-      display:inline-flex; align-items:center; justify-content:center; gap:12px;
-      background:linear-gradient(180deg,#1c1c1e,#000);
+      display:inline-flex; align-items:center; justify-content:center; gap:13px;
+      background:var(--black);
       color:#fff; text-decoration:none;
-      padding:16px 26px; border-radius:16px; width:100%;
-      font-size:1.15rem; font-weight:700;
-      box-shadow:0 16px 34px -14px rgba(0,0,0,.6);
-      border:1px solid rgba(255,255,255,.08);
+      padding:16px 30px; border-radius:16px;
+      font-size:1.18rem; font-weight:700;
+      box-shadow:0 16px 34px -16px rgba(0,0,0,.55);
       transition:transform .2s ease, box-shadow .2s ease;
     }
-    .btn-wallet:hover{ transform:translateY(-2px); box-shadow:0 22px 40px -16px rgba(0,0,0,.6); }
+    .btn-wallet:hover{ transform:translateY(-2px); box-shadow:0 22px 42px -18px rgba(0,0,0,.55); }
     .btn-wallet:active{ transform:translateY(0); }
     .btn-wallet svg{ width:30px;height:30px; flex:none; }
-    .btn-wallet .txt{ display:flex; flex-direction:column; align-items:flex-start; line-height:1.15; }
-    .btn-wallet .txt small{ font-weight:500; font-size:.72rem; opacity:.75; }
+    .btn-wallet .txt{ display:flex; flex-direction:column; align-items:flex-start; line-height:1.2; }
+    .btn-wallet .txt small{ font-weight:400; font-size:.74rem; opacity:.82; }
 
-    .hint{
-      margin-top:14px; font-size:.9rem; color:var(--ink-soft);
-      display:flex; align-items:flex-start; gap:8px;
+    .ios-note{
+      margin-top:16px; font-size:.94rem; color:var(--ink-soft);
+      display:flex; align-items:center; justify-content:center; gap:8px;
     }
-    .hint svg{ width:17px;height:17px; flex:none; margin-top:3px; color:var(--gold-deep); }
+    .ios-note svg{ width:17px;height:17px; color:var(--sky); flex:none; }
 
     .btn-alt{
-      margin-top:12px; display:inline-flex; align-items:center; gap:8px;
-      color:var(--gold-deep); font-weight:700; text-decoration:none; font-size:.95rem;
-      border-bottom:1px solid transparent; transition:border-color .2s;
+      margin-top:14px; display:inline-flex; align-items:center; gap:8px;
+      color:var(--sky); font-weight:700; text-decoration:none; font-size:1rem;
+      border-bottom:1.5px solid transparent; transition:border-color .2s;
     }
-    .btn-alt:hover{ border-color:var(--gold-deep); }
+    .btn-alt svg{ width:17px;height:17px; }
+    .btn-alt:hover{ border-color:var(--sky); }
+
+    /* ===== SECTION HEADS ===== */
+    .section-head{ text-align:center; margin:58px 0 24px; }
+    .section-head h2{ font-weight:700; font-size:clamp(1.5rem,4vw,2rem); }
+    .section-head h2 span{ color:var(--sky); }
+    .section-head p{ color:var(--ink-soft); margin-top:6px; font-size:1rem; }
 
     /* ===== STEPS ===== */
-    .steps{
-      margin:60px 0 30px;
-    }
-    .steps .head{ text-align:center; margin-bottom:34px; }
-    .steps .head h3{
-      font-family:"Aref Ruqaa","Amiri",serif; font-size:clamp(1.6rem,4vw,2.1rem); font-weight:700;
-    }
-    .steps .head span{ color:var(--gold-deep); }
-    .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .steps{ margin:56px 0 14px; }
+    .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
     @media (max-width:760px){ .grid3{ grid-template-columns:1fr; } }
-
     .step{
-      background:linear-gradient(180deg,#fff,#fffdf7);
-      border:1px solid var(--line); border-radius:20px; padding:26px 22px;
-      box-shadow:var(--shadow-sm); text-align:center; position:relative;
+      background:var(--gray);
+      border:1px solid var(--line); border-radius:20px; padding:28px 22px;
+      text-align:center;
     }
     .step .num{
-      width:46px;height:46px;border-radius:50%; margin:0 auto 14px;
+      width:50px;height:50px;border-radius:50%; margin:0 auto 14px;
       display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(180deg,var(--gold-soft),#fff);
-      border:1px solid var(--line); color:var(--gold-deep); font-weight:800; font-size:1.2rem;
-      font-family:"Reem Kufi",serif;
+      background:var(--sky-37); color:var(--black); font-weight:700; font-size:1.3rem;
     }
-    .step h4{ font-size:1.15rem; margin-bottom:6px; }
-    .step p{ color:var(--ink-soft); font-size:.96rem; }
+    .step h4{ font-size:1.18rem; margin-bottom:6px; font-weight:700; }
+    .step p{ color:var(--ink-soft); font-size:.98rem; }
+    .step p b{ color:var(--black); }
+
+    /* ===== CARDS GALLERY ===== */
+    .cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    @media (max-width:720px){ .cards{ grid-template-columns:1fr; } }
+
+    .tile{
+      background:var(--gray);
+      border:1px solid var(--line); border-radius:22px;
+      padding:16px 16px 18px; box-shadow:var(--shadow-sm);
+      display:flex; flex-direction:column; text-decoration:none; color:inherit;
+      transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s;
+    }
+    .tile:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-sky); }
+    .tile h3{
+      font-size:1.28rem; font-weight:700; color:var(--black);
+      text-align:center; padding:6px 0 14px;
+    }
+    .tile-strip{
+      border-radius:14px; overflow:hidden; border:1px solid var(--line);
+      background:#f3f3f3;
+    }
+    .tile-strip img{ width:100%; display:block; }
+    .save-hint{
+      margin-top:12px; text-align:center; font-size:.86rem; color:var(--sky);
+      font-weight:700; opacity:0; transition:opacity .3s;
+      display:flex; align-items:center; justify-content:center; gap:6px;
+    }
+    .save-hint svg{ width:15px;height:15px; }
+    .tile:hover .save-hint{ opacity:1; }
 
     /* ===== DEDICATION ===== */
     .dedication{
-      margin:34px 0; text-align:center;
-      background:
-        radial-gradient(600px 260px at 50% 0%, rgba(201,162,75,.12), transparent 70%),
-        linear-gradient(180deg,#fff, #fffdf6);
+      margin:44px 0; text-align:center;
+      background:var(--gray);
       border:1px solid var(--line); border-radius:26px;
-      padding:44px 30px; box-shadow:var(--shadow-sm);
+      padding:48px 30px;
     }
-    .dedication .orn{ color:var(--gold); font-size:1.6rem; margin-bottom:8px; letter-spacing:6px; }
-    .dedication h3{
-      font-family:"Amiri",serif; font-weight:700;
-      font-size:clamp(1.4rem,4vw,2rem); margin-bottom:10px;
-    }
-    .dedication .name{ color:var(--gold-deep); }
-    .dedication p{ max-width:560px; margin:0 auto; color:var(--ink-soft); }
-    .dedication .dua{
-      font-family:"Amiri",serif; font-style:italic; margin-top:16px; color:var(--ink);
-      font-size:1.1rem;
-    }
+    .dedication .orn{ color:var(--sky); font-size:1.6rem; margin-bottom:8px; letter-spacing:6px; }
+    .dedication h3{ font-weight:700; font-size:clamp(1.4rem,4vw,2rem); margin-bottom:12px; }
+    .dedication .name{ color:var(--sky); }
+    .dedication p{ max-width:600px; margin:0 auto; color:var(--ink-soft); }
+    .dedication .dua{ margin-top:16px; color:var(--black); font-size:1.08rem; }
 
     /* ===== FOOTER ===== */
-    footer{
-      text-align:center; padding:30px 0 40px; color:var(--ink-soft); font-size:.9rem;
-    }
+    footer{ text-align:center; padding:34px 0 46px; color:var(--ink-soft); font-size:.94rem; }
     footer .sep{ width:60px;height:1px;background:var(--line); margin:0 auto 16px; }
-    footer .heart{ color:var(--green); }
+    footer .heart{ color:var(--sky); }
 
-    /* subtle fade-in */
-    .fade{ opacity:0; transform:translateY(14px); animation:rise .8s forwards; }
-    .fade.d1{ animation-delay:.05s; } .fade.d2{ animation-delay:.15s; }
-    .fade.d3{ animation-delay:.28s; } .fade.d4{ animation-delay:.4s; }
+    /* fade-in */
+    .fade{ opacity:0; transform:translateY(14px); animation:rise .7s forwards; }
+    .fade.d1{ animation-delay:.05s; } .fade.d2{ animation-delay:.14s; }
+    .fade.d3{ animation-delay:.24s; } .fade.d4{ animation-delay:.34s; }
     @keyframes rise{ to{ opacity:1; transform:none; } }
     @media (prefers-reduced-motion:reduce){ .fade{ animation:none; opacity:1; transform:none; } }
   </style>
@@ -258,97 +205,116 @@
 <body>
 
   <div class="topbar">
-    <span class="dot"></span>
-    <span>صدقة جارية</span>
-    <span class="dot"></span>
+    <span class="dot"></span><span>صدقة جارية</span><span class="dot"></span>
   </div>
 
   <div class="wrap">
 
     <!-- HERO -->
     <section class="hero">
-      <h1 class="fade d2"><span class="grad">أذكار الصباح</span></h1>
-      <p class="lede fade d3">
-        بطاقةٌ تحمل <b>أذكار الصباح</b> تُضاف إلى محفظة هاتفك، فتكون معك أينما ذهبت.
-        اجعلها وِرْدك اليومي، وكن شريكاً في الأجر — <b>صدقةٌ جارية عن عبدالله السلطان</b>.
+      <h1 class="fade d1">ذكرٌ يرافقك في يومك، <span class="accent">وخيرٌ يمتد أثره إلى غيرك</span></h1>
+      <p class="lede fade d2">
+        احفظ البطاقة في محفظة هاتفك، واجعلها عادةً لا تنقطع، ثم انشرها؛
+        فربما كانت سببًا في ذكرٍ يُحيي قلبًا، وأجرٍ يجري لك ولمن أُهديت عنه.
       </p>
-    </section>
 
-    <!-- CARD + CTA -->
-    <section class="stage">
-
-      <!-- Wallet card mockup -->
-      <div class="card fade d2">
-        <div class="float">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 6h-5a2 2 0 0 0 0 4h5v4H4V6h16z"/></svg>
-          بطاقة محفظة
-        </div>
-        <div class="card-top">
-          <span class="brand">أذكار</span>
-          <span class="card-logo"><img src="assets/card-logo.png" alt="أذكار الصباح" /></span>
-        </div>
-        <div class="strip">
-          <img src="assets/card-strip.png" alt="نص أذكار الصباح" loading="lazy" />
-        </div>
-        <div class="pin">
-          <span>وِرد الصباح</span>
-          <span class="val">﴾ ٤ مرّات ﴿</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="cta fade d3">
-        <h2>أضِفها إلى محفظتك الآن</h2>
-        <p>اضغط الزر، ثم اختر <b>«إضافة»</b> لتُحفظ البطاقة في محفظة آبل مباشرة.</p>
-
-        <a class="btn-wallet" href="athkar-alsabah.pkpass" id="walletBtn">
+      <div class="cta-main fade d3">
+        <a class="btn-wallet" href="all-athkar.pkpasses" id="addAll">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v3h-6.5a2.5 2.5 0 0 0 0 5H22v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm11.5 6.5a1 1 0 0 0 0 2H22v-2h-6.5z"/></svg>
           <span class="txt">
-            الإضافة إلى
-            <small>Apple Wallet</small>
+            أضِفها إلى محفظتك
+            <small>كل البطاقات دفعة واحدة</small>
           </span>
         </a>
 
-        <div class="hint">
+        <div class="ios-note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          <span>لإضافة البطاقة إلى المحفظة، افتح هذه الصفحة من <b>آيفون أو آيباد</b> عبر Safari. على الأجهزة الأخرى سيتم تنزيل الملف.</span>
+          <span>هذه الخاصية تعمل على أجهزة <b>آيفون وآيباد (iOS)</b> فقط، عبر Safari.</span>
         </div>
 
-        <a class="btn-alt" href="athkar-alsabah.pkpass" download="اذكار-الصباح.pkpass">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-          تنزيل الملف يدوياً
+        <a class="btn-alt" href="#cards">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6" fill="currentColor" stroke="none"/><path d="M21 15l-5-5L5 21"/></svg>
+          أو احفظ الأذكار كصورة
         </a>
       </div>
     </section>
 
     <!-- STEPS -->
     <section class="steps">
-      <div class="head">
-        <h3>ثلاث خطوات <span>فقط</span></h3>
+      <div class="section-head">
+        <h2>ثلاث خطوات <span>فقط</span></h2>
       </div>
       <div class="grid3">
         <div class="step fade d1">
           <div class="num">١</div>
-          <h4>اضغط الزر</h4>
-          <p>اضغط على «الإضافة إلى Apple Wallet» من جهاز آبل.</p>
+          <h4>اضغط الأيقونة</h4>
+          <p>اضغط على <b>«أضِفها إلى محفظتك»</b> من جهاز آيفون.</p>
         </div>
         <div class="step fade d2">
           <div class="num">٢</div>
-          <h4>أضِف البطاقة</h4>
-          <p>تظهر البطاقة، اختر «إضافة» في أعلى الشاشة.</p>
+          <h4>أضِف البطاقات</h4>
+          <p>تظهر البطاقات، اختر <b>«إضافة»</b> لتُحفظ في محفظتك.</p>
         </div>
         <div class="step fade d3">
           <div class="num">٣</div>
           <h4>اقرأ وتَذكَّر</h4>
-          <p>افتح محفظتك كل صباح واقرأ الأذكار، والأجر يجري.</p>
+          <p>افتح محفظتك كل يوم واقرأ الأذكار، والأجر يجري بإذن الله.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- CARDS GALLERY -->
+    <section id="cards">
+      <div class="section-head">
+        <h2>البطاقات <span>الست</span></h2>
+        <p>اضغط أي بطاقة لحفظها كصورة في جهازك.</p>
+      </div>
+
+      <div class="cards">
+
+        <a class="tile fade d1" href="assets/cards/sabah.png" download="أذكار الصباح.png">
+          <h3>أذكار الصباح</h3>
+          <div class="tile-strip"><img src="assets/cards/sabah.png" alt="أذكار الصباح" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d2" href="assets/cards/masaa.png" download="أذكار المساء.png">
+          <h3>أذكار المساء</h3>
+          <div class="tile-strip"><img src="assets/cards/masaa.png" alt="أذكار المساء" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d1" href="assets/cards/salah.png" download="أذكار ما بعد الصلاة.png">
+          <h3>أذكار ما بعد الصلاة</h3>
+          <div class="tile-strip"><img src="assets/cards/salah.png" alt="أذكار ما بعد الصلاة" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d2" href="assets/cards/khuruj.png" download="دعاء الخروج.png">
+          <h3>دعاء الخروج</h3>
+          <div class="tile-strip"><img src="assets/cards/khuruj.png" alt="دعاء الخروج" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d1" href="assets/cards/istighfar.png" download="الاستغفار.png">
+          <h3>الاستغفار</h3>
+          <div class="tile-strip"><img src="assets/cards/istighfar.png" alt="الاستغفار" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d2" href="assets/cards/tasabih.png" download="التسابيح.png">
+          <h3>التسابيح</h3>
+          <div class="tile-strip"><img src="assets/cards/tasabih.png" alt="التسابيح" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
       </div>
     </section>
 
     <!-- DEDICATION -->
     <section class="dedication fade">
       <div class="orn">۞</div>
-      <h3>صدقةٌ جارية عن <span class="name">عبدالله السلطان</span></h3>
+      <h3>صدقةٌ جارية عن <span class="name">عبدالله السلطان</span>، رحمه الله</h3>
       <p>نسأل الله أن يجعل كل ذِكرٍ يُقرأ من هذه البطاقة في ميزان حسناته، وأن يتقبّلها صدقةً جاريةً لا ينقطع أجرها.</p>
       <div class="dua">«إذا مات ابنُ آدم انقطع عملُه إلا من ثلاث… أو علمٍ يُنتفع به»</div>
     </section>
@@ -360,19 +326,5 @@
     <div>صُنِعت بحبٍّ <span class="heart">♥</span> ابتغاءَ وجه الله — شاركها لتُضاعف الأجر</div>
   </footer>
 
-  <script>
-    // Friendly detection: on non-Apple devices, soften the wallet button label.
-    (function () {
-      var ua = navigator.userAgent || "";
-      var isApple = /iPhone|iPad|iPod|Macintosh/i.test(ua) && !window.MSStream;
-      if (!isApple) {
-        var btn = document.getElementById("walletBtn");
-        if (btn) {
-          var small = btn.querySelector("small");
-          if (small) small.textContent = "تنزيل ملف البطاقة";
-        }
-      }
-    })();
-  </script>
 </body>
 </html>

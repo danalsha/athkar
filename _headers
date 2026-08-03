@@ -2,3 +2,6 @@
 /*.pkpass
   Content-Type: application/vnd.apple.pkpass
   Content-Disposition: inline
+/*.pkpasses
+  Content-Type: application/vnd.apple.pkpasses
+  Content-Disposition: inline

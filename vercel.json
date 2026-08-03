@@ -1,6 +1,13 @@
 {
   "headers": [
     {
+      "source": "/(.*).pkpasses",
+      "headers": [
+        { "key": "Content-Type", "value": "application/vnd.apple.pkpasses" },
+        { "key": "Content-Disposition", "value": "inline" }
+      ]
+    },
+    {
       "source": "/(.*).pkpass",
       "headers": [
         { "key": "Content-Type", "value": "application/vnd.apple.pkpass" },

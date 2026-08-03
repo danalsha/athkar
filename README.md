@@ -1,26 +1,26 @@
-# أذكار الصباح · صدقة جارية عن عبدالله السلطان
+# صدقة جارية · أذكار في محفظتك
 
-موقع عربي بسيط يتيح إضافة بطاقة **أذكار الصباح** إلى **محفظة آبل (Apple Wallet)** — صدقة جارية، نسأل الله أن يجعلها في ميزان حسناته.
+موقع عربي بسيط يتيح إضافة **ست بطاقات أذكار** إلى **محفظة آبل (Apple Wallet)** — صدقة جارية عن عبدالله السلطان، رحمه الله.
+
+البطاقات: أذكار الصباح · أذكار المساء · أذكار ما بعد الصلاة · دعاء الخروج · الاستغفار · التسابيح.
+
+## المزايا
+- زر **«أضِفها إلى محفظتك»** يضيف **كل البطاقات دفعة واحدة** (ملف `all-athkar.pkpasses`).
+- أو إضافة كل بطاقة على حدة (`cards-*.pkpass`).
+- خيار **حفظ أي بطاقة كصورة** لمن لا يستخدم آيفون (صور في `assets/cards/`).
+- الخط: **Cocon Next Arabic** (`assets/fonts/`). الألوان: أبيض/أسود/رمادي `#F5F5F5`/سماوي `#76ABAE`.
 
 ## النشر عبر Netlify (مهم)
 
-> ⚠️ لا يعمل زر "الإضافة إلى Apple Wallet" إذا فُتح الموقع من GitHub مباشرة، لأن GitHub يقدّم ملف `.pkpass`
-> بالنوع `application/octet-stream`. يجب النشر عبر Netlify (أو Vercel/Cloudflare) الذي يقرأ ملف `netlify.toml`
-> ويقدّم البطاقة بالنوع الصحيح `application/vnd.apple.pkpass`.
+> ⚠️ خاصية «الإضافة إلى المحفظة» تعمل على **آيفون/آيباد فقط (iOS)**، وتتطلّب أن يقدّم الخادم الملفات بالنوع الصحيح.
+> GitHub وحده يقدّم `.pkpass` كـ `octet-stream` فلا تعمل الخاصية — لذلك يجب النشر عبر **Netlify** الذي يقرأ `netlify.toml`.
 
-### الخطوات
-1. ادخل إلى [app.netlify.com](https://app.netlify.com) وسجّل الدخول (يمكن عبر حساب GitHub).
-2. اختر **Add new site → Import an existing project → GitHub**.
-3. اختر مستودع `mah-06/wallet`.
-4. اترك إعدادات البناء فارغة (الموقع ثابت — لا يحتاج build)، واضغط **Deploy**.
-5. سيعطيك Netlify رابطاً مثل `https://<اسم>.netlify.app` — افتحه من **آيفون عبر Safari** لتجربة زر المحفظة.
-
-بعد ذلك، أي تعديل تدفعه إلى `main` يُنشر تلقائياً.
+الموقع مربوط بـ Netlify (نشر تلقائي). أي تعديل يُدفع إلى `main` يُنشر تلقائياً.
+الأنواع المضبوطة: `application/vnd.apple.pkpass` و `application/vnd.apple.pkpasses`.
 
 ## الملفات
-- `index.html` — صفحة الموقع.
-- `athkar-alsabah.pkpass` — بطاقة المحفظة (Apple Wallet pass موقّعة).
-- `assets/` — صور البطاقة.
-- `netlify.toml` / `_headers` — إعداد النوع الصحيح على Netlify.
-- `vercel.json` — إعداد Vercel (بديل).
-- `.htaccess` — إعداد Apache/cPanel (بديل).
+- `index.html` — الصفحة.
+- `all-athkar.pkpasses` — حزمة البطاقات الست (إضافة دفعة واحدة).
+- `cards-*.pkpass` — البطاقات مفردة.
+- `assets/cards/*.png` — صور البطاقات. `assets/fonts/*.otf` — خط Cocon.
+- `netlify.toml` / `_headers` / `vercel.json` / `.htaccess` — ضبط أنواع الملفات.

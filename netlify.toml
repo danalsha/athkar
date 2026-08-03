@@ -1,6 +1,12 @@
-# Netlify configuration
+# Netlify configuration — serve Apple Wallet passes with correct MIME types
 [[headers]]
   for = "/*.pkpass"
   [headers.values]
     Content-Type = "application/vnd.apple.pkpass"
+    Content-Disposition = "inline"
+
+[[headers]]
+  for = "/*.pkpasses"
+  [headers.values]
+    Content-Type = "application/vnd.apple.pkpasses"
     Content-Disposition = "inline"
