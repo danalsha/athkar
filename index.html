@@ -160,6 +160,13 @@
     .step p b{ color:var(--black); }
     .step-cta{ margin-top:20px; display:flex; flex-direction:column; align-items:center; }
 
+    /* ===== divider ===== */
+    .divider-sky{
+      border:0; height:2px; border-radius:2px;
+      margin:60px auto 0; width:100%;
+      background:linear-gradient(90deg, transparent, var(--sky), transparent);
+    }
+
     /* ===== CARDS GALLERY ===== */
     .cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
     @media (max-width:720px){ .cards{ grid-template-columns:1fr; } }
@@ -279,6 +286,8 @@
 
       </div>
     </section>
+
+    <hr class="divider-sky" />
 
     <!-- CARDS GALLERY (بقية البطاقات) -->
     <section id="cards">
