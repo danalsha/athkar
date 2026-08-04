@@ -92,8 +92,18 @@
       color:var(--ink-soft); font-weight:400;
     }
 
-    /* ===== primary CTA ===== */
-    .cta-main{ text-align:center; margin:34px 0 6px; }
+    /* ===== featured card (أذكار الصباح) ===== */
+    .featured{
+      margin:32px auto 0; max-width:560px; width:100%;
+      background:var(--gray);
+      border:1px solid var(--line); border-radius:22px;
+      padding:16px 16px 18px; box-shadow:var(--shadow-sm);
+      display:flex; flex-direction:column; text-decoration:none; color:inherit;
+      transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s;
+    }
+    .featured:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-sky); }
+
+    /* ===== buttons ===== */
     .btn-wallet{
       display:inline-flex; align-items:center; justify-content:center; gap:13px;
       background:var(--black);
@@ -131,14 +141,15 @@
     .section-head p{ color:var(--ink-soft); margin-top:6px; font-size:1rem; }
 
     /* ===== STEPS ===== */
-    .steps{ margin:56px 0 14px; }
-    .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    @media (max-width:760px){ .grid3{ grid-template-columns:1fr; } }
+    .steps{ margin:52px 0 14px; }
+    .steps-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    @media (max-width:760px){ .steps-grid{ grid-template-columns:1fr; } }
     .step{
       background:var(--gray);
       border:1px solid var(--line); border-radius:20px; padding:28px 22px;
       text-align:center;
     }
+    .step-wide{ grid-column:1 / -1; }
     .step .num{
       width:50px;height:50px;border-radius:50%; margin:0 auto 14px;
       display:flex;align-items:center;justify-content:center;
@@ -147,6 +158,7 @@
     .step h4{ font-size:1.18rem; margin-bottom:6px; font-weight:700; }
     .step p{ color:var(--ink-soft); font-size:.98rem; }
     .step p b{ color:var(--black); }
+    .step-cta{ margin-top:20px; display:flex; flex-direction:column; align-items:center; }
 
     /* ===== CARDS GALLERY ===== */
     .cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
@@ -160,7 +172,7 @@
       transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s;
     }
     .tile:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-sky); }
-    .tile h3{
+    .tile h3, .featured h3{
       font-size:1.28rem; font-weight:700; color:var(--black);
       text-align:center; padding:6px 0 14px;
     }
@@ -176,22 +188,18 @@
     }
     .save-hint svg{ width:16px;height:16px; }
 
-    /* ===== DEDICATION ===== */
-    .dedication{
-      margin:44px 0; text-align:center;
-      background:var(--gray);
-      border:1px solid var(--line); border-radius:26px;
-      padding:48px 30px;
+    /* ===== FOOTER (dedication) ===== */
+    footer{
+      margin-top:56px;
+      background:var(--gray); border-top:1px solid var(--line);
+      padding:52px 22px 40px; text-align:center;
     }
-    .dedication .orn{ color:var(--sky); font-size:1.6rem; margin-bottom:8px; letter-spacing:6px; }
-    .dedication h3{ font-weight:700; font-size:clamp(1.4rem,4vw,2rem); margin-bottom:12px; }
-    .dedication .name{ color:var(--sky); }
-    .dedication p{ max-width:600px; margin:0 auto; color:var(--ink-soft); }
-    .dedication .dua{ margin-top:16px; color:var(--black); font-size:1.08rem; }
-
-    /* ===== FOOTER ===== */
-    footer{ text-align:center; padding:34px 0 46px; color:var(--ink-soft); font-size:.94rem; }
-    footer .sep{ width:60px;height:1px;background:var(--line); margin:0 auto 16px; }
+    footer .orn{ color:var(--sky); font-size:1.6rem; margin-bottom:8px; letter-spacing:6px; }
+    footer h3{ font-weight:700; font-size:clamp(1.35rem,4vw,1.9rem); margin-bottom:12px; color:var(--black); }
+    footer .name{ color:var(--sky); }
+    footer p{ max-width:600px; margin:0 auto; color:var(--ink-soft); }
+    footer .sep{ width:60px;height:1px;background:var(--line); margin:26px auto 16px; }
+    footer .made{ color:var(--ink-soft); font-size:.94rem; }
     footer .heart{ color:var(--sky); }
 
     /* fade-in */
@@ -218,25 +226,12 @@
         فربما كانت سببًا في ذكرٍ يُحيي قلبًا، وأجرٍ يجري لك ولمن أُهديت عنه.
       </p>
 
-      <div class="cta-main fade d3">
-        <a class="btn-wallet" href="all-athkar.pkpasses" id="addAll">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v3h-6.5a2.5 2.5 0 0 0 0 5H22v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm11.5 6.5a1 1 0 0 0 0 2H22v-2h-6.5z"/></svg>
-          <span class="txt">
-            أضِفها إلى محفظتك
-            <small>كل البطاقات دفعة واحدة</small>
-          </span>
-        </a>
-
-        <div class="ios-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          <span>هذه الخاصية تعمل على أجهزة الـ <b>(iOS)</b></span>
-        </div>
-
-        <a class="btn-alt" href="#cards">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6" fill="currentColor" stroke="none"/><path d="M21 15l-5-5L5 21"/></svg>
-          احفظ الأذكار كصورة
-        </a>
-      </div>
+      <!-- featured card: أذكار الصباح -->
+      <a class="featured fade d3" href="assets/cards/sabah.png" download="أذكار الصباح.png">
+        <h3>أذكار الصباح</h3>
+        <div class="tile-strip"><img src="assets/cards/sabah.png" alt="أذكار الصباح" /></div>
+        <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+      </a>
     </section>
 
     <!-- STEPS -->
@@ -244,12 +239,33 @@
       <div class="section-head">
         <h2>ثلاث خطوات <span>فقط</span></h2>
       </div>
-      <div class="grid3">
-        <div class="step fade d1">
+      <div class="steps-grid">
+
+        <!-- الخطوة الأولى + زر الإضافة -->
+        <div class="step step-wide fade d1">
           <div class="num">١</div>
           <h4>اضغط الأيقونة</h4>
           <p>اضغط على <b>«أضِفها إلى محفظتك»</b> من جهاز آيفون.</p>
+
+          <div class="step-cta">
+            <a class="btn-wallet" href="all-athkar.pkpasses" id="addAll">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v3h-6.5a2.5 2.5 0 0 0 0 5H22v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm11.5 6.5a1 1 0 0 0 0 2H22v-2h-6.5z"/></svg>
+              <span class="txt">
+                أضِفها إلى محفظتك
+                <small>كل البطاقات دفعة واحدة</small>
+              </span>
+            </a>
+            <div class="ios-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <span>هذه الخاصية تعمل على أجهزة الـ <b>(iOS)</b></span>
+            </div>
+            <a class="btn-alt" href="#cards">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6" fill="currentColor" stroke="none"/><path d="M21 15l-5-5L5 21"/></svg>
+              احفظ الأذكار كصورة
+            </a>
+          </div>
         </div>
+
         <div class="step fade d2">
           <div class="num">٢</div>
           <h4>أضِف البطاقات</h4>
@@ -260,49 +276,44 @@
           <h4>اقرأ وتَذكَّر</h4>
           <p>افتح محفظتك كل يوم واقرأ الأذكار، والأجر يجري بإذن الله.</p>
         </div>
+
       </div>
     </section>
 
-    <!-- CARDS GALLERY -->
+    <!-- CARDS GALLERY (بقية البطاقات) -->
     <section id="cards">
       <div class="section-head">
-        <h2>البطاقات <span>الست</span></h2>
+        <h2>بقية <span>البطاقات</span></h2>
         <p>اضغط أي بطاقة لحفظها كصورة في جهازك.</p>
       </div>
 
       <div class="cards">
 
-        <a class="tile fade d1" href="assets/cards/sabah.png" download="أذكار الصباح.png">
-          <h3>أذكار الصباح</h3>
-          <div class="tile-strip"><img src="assets/cards/sabah.png" alt="أذكار الصباح" loading="lazy" /></div>
-          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
-        </a>
-
-        <a class="tile fade d2" href="assets/cards/masaa.png" download="أذكار المساء.png">
+        <a class="tile fade d1" href="assets/cards/masaa.png" download="أذكار المساء.png">
           <h3>أذكار المساء</h3>
           <div class="tile-strip"><img src="assets/cards/masaa.png" alt="أذكار المساء" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
         </a>
 
-        <a class="tile fade d1" href="assets/cards/salah.png" download="أذكار ما بعد الصلاة.png">
+        <a class="tile fade d2" href="assets/cards/salah.png" download="أذكار ما بعد الصلاة.png">
           <h3>أذكار ما بعد الصلاة</h3>
           <div class="tile-strip"><img src="assets/cards/salah.png" alt="أذكار ما بعد الصلاة" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
         </a>
 
-        <a class="tile fade d2" href="assets/cards/khuruj.png" download="دعاء الخروج.png">
+        <a class="tile fade d1" href="assets/cards/khuruj.png" download="دعاء الخروج.png">
           <h3>دعاء الخروج</h3>
           <div class="tile-strip"><img src="assets/cards/khuruj.png" alt="دعاء الخروج" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
         </a>
 
-        <a class="tile fade d1" href="assets/cards/istighfar.png" download="الاستغفار.png">
+        <a class="tile fade d2" href="assets/cards/istighfar.png" download="الاستغفار.png">
           <h3>الاستغفار</h3>
           <div class="tile-strip"><img src="assets/cards/istighfar.png" alt="الاستغفار" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
         </a>
 
-        <a class="tile fade d2" href="assets/cards/tasabih.png" download="التسابيح.png">
+        <a class="tile fade d1" href="assets/cards/tasabih.png" download="التسابيح.png">
           <h3>التسابيح</h3>
           <div class="tile-strip"><img src="assets/cards/tasabih.png" alt="التسابيح" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
@@ -311,19 +322,15 @@
       </div>
     </section>
 
-    <!-- DEDICATION -->
-    <section class="dedication fade">
-      <div class="orn">۞</div>
-      <h3>صدقةٌ جارية عن <span class="name">عبدالله السلطان</span>، رحمه الله</h3>
-      <p>نسأل الله أن يجعل كل ذِكرٍ يُقرأ من هذه البطاقة في ميزان حسناته، وأن يتقبّلها صدقةً جاريةً لا ينقطع أجرها.</p>
-      <div class="dua">«إذا مات ابنُ آدم انقطع عملُه إلا من ثلاث… أو علمٍ يُنتفع به»</div>
-    </section>
-
   </div>
 
+  <!-- FOOTER (الإهداء) -->
   <footer>
+    <div class="orn">۞</div>
+    <h3>صدقةٌ جارية عن <span class="name">عبدالله السلطان</span>، رحمه الله</h3>
+    <p>نسأل الله أن يجعل كل ذِكرٍ يُقرأ من هذه البطاقات في ميزان حسناته، وأن يتقبّلها صدقةً جاريةً لا ينقطع أجرها.</p>
     <div class="sep"></div>
-    <div>صُنِعت بحبٍّ <span class="heart">♥</span> ابتغاءَ وجه الله — شاركها لتُضاعف الأجر</div>
+    <div class="made">صُنِعت بحبٍّ <span class="heart">♥</span> ابتغاءَ وجه الله — شاركها لتُضاعف الأجر</div>
   </footer>
 
 </body>
