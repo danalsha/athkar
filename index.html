@@ -92,16 +92,14 @@
       color:var(--ink-soft); font-weight:400;
     }
 
-    /* ===== featured card (أذكار الصباح) ===== */
-    .featured{
-      margin:32px auto 0; max-width:560px; width:100%;
-      background:var(--gray);
-      border:1px solid var(--line); border-radius:22px;
-      padding:16px 16px 18px; box-shadow:var(--shadow-sm);
-      display:flex; flex-direction:column; text-decoration:none; color:inherit;
-      transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s;
+    /* ===== hero screenshot (Add All · 6 Cards) ===== */
+    .hero-shot{ margin:34px auto 0; max-width:470px; width:100%; }
+    .hero-shot img{
+      width:100%; display:block; border-radius:26px;
+      box-shadow:0 34px 74px -42px rgba(0,0,0,.4);
+      border:1px solid var(--line);
     }
-    .featured:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line-sky); }
+    .hero-shot figcaption{ margin-top:14px; color:var(--ink-soft); font-size:.95rem; }
 
     /* ===== buttons ===== */
     .btn-wallet{
@@ -233,12 +231,11 @@
         فربما كانت سببًا في ذكرٍ يُحيي قلبًا، وأجرٍ يجري لك ولمن أُهديت عنه.
       </p>
 
-      <!-- featured card: أذكار الصباح -->
-      <a class="featured fade d3" href="assets/cards/sabah.png" download="أذكار الصباح.png">
-        <h3>أذكار الصباح</h3>
-        <div class="tile-strip"><img src="assets/cards/sabah.png" alt="أذكار الصباح" /></div>
-        <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
-      </a>
+      <!-- صورة توضيحية: شاشة الإضافة على آيفون -->
+      <figure class="hero-shot fade d3">
+        <img src="assets/add-screen.png" alt="شاشة إضافة البطاقات إلى محفظة آبل" />
+        <figcaption>هكذا تظهر شاشة الإضافة على آيفون عند الضغط على الزر.</figcaption>
+      </figure>
     </section>
 
     <!-- STEPS -->
@@ -292,13 +289,19 @@
     <!-- CARDS GALLERY (بقية البطاقات) -->
     <section id="cards">
       <div class="section-head">
-        <h2>بقية <span>البطاقات</span></h2>
+        <h2>البطاقات <span>الست</span></h2>
         <p>اضغط أي بطاقة لحفظها كصورة في جهازك.</p>
       </div>
 
       <div class="cards">
 
-        <a class="tile fade d1" href="assets/cards/masaa.png" download="أذكار المساء.png">
+        <a class="tile fade d1" href="assets/cards/sabah.png" download="أذكار الصباح.png">
+          <h3>أذكار الصباح</h3>
+          <div class="tile-strip"><img src="assets/cards/sabah.png" alt="أذكار الصباح" loading="lazy" /></div>
+          <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
+        </a>
+
+        <a class="tile fade d2" href="assets/cards/masaa.png" download="أذكار المساء.png">
           <h3>أذكار المساء</h3>
           <div class="tile-strip"><img src="assets/cards/masaa.png" alt="أذكار المساء" loading="lazy" /></div>
           <span class="save-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> حفظ كصورة</span>
